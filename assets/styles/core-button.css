@@ -3,15 +3,18 @@
 
 .wp-block-button .wp-block-button__link {
 	transform: translateY(0);
-	transition: transform .2s;
+	transition: transform .2s, box-shadow .2s;
+	text-transform: uppercase;
+	box-shadow: 0px rgba(0,0,0,0);
 }
 
 .wp-block-button .wp-block-button__link:hover {
 	transform: translateY(-2px);
+	box-shadow: var(--wp--preset--shadow--natural);
 }
 
 .wp-block-button .wp-block-button__link:active {
-	transform: translateY(4px);
+	transform: translateY(2px);
 		transition: transform 0s;
 }
 
@@ -26,5 +29,5 @@
 	color: var(--wp--preset--color--main) !important;
 	outline-color: var(--wp--preset--color--main);
 	text-decoration: none;
-	transform: translateY(-2px);
+	transform: translateY(-1px);
 }
