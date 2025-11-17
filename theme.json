@@ -12,88 +12,24 @@
 					"name": "Blue",
 					"slug": "blue",
 					"colors": [
-						"#462CFF",
-						"#ECE8FF"
-					]
-				},
-				{
-					"name": "Pink",
-					"slug": "Pink",
-					"colors": [
-						"#F22AAA",
-						"#FFDBF0"
-					]
-				},
-				{
-					"name": "Green",
-					"slug": "green",
-					"colors": [
-						"#196A64",
-						"#E0FFFD"
-					]
-				},
-				{
-					"name": "Yellow",
-					"slug": "yellow",
-					"colors": [
-						"#4B420D",
-						"#FFE465"
+						"#004B56",
+						"#1A5D67"
 					]
 				},
 				{
 					"name": "Red",
 					"slug": "red",
 					"colors": [
-						"#33120B",
-						"#FF756B"
+						"#A75443",
+						"#B06556"
 					]
 				},
 				{
 					"name": "Teal",
 					"slug": "teal",
 					"colors": [
-						"#233938",
-						"#67EBFF"
-					]
-				},
-				{
-					"name": "Orange",
-					"slug": "orange",
-					"colors": [
-						"#31210D",
-						"#FFA15B"
-					]
-				},
-				{
-					"name": "Punchy",
-					"slug": "punchy",
-					"colors": [
-						"#00007e",
-						"#6aff7e"
-					]
-				},
-				{
-					"name": "Blueberry",
-					"slug": "blueberry",
-					"colors": [
-						"#7f02d3",
-						"#00dbfe"
-					]
-				},
-				{
-					"name": "Lime",
-					"slug": "lime",
-					"colors": [
-						"#02794c",
-						"#fbf01a"
-					]
-				},
-				{
-					"name": "Sunset",
-					"slug": "sunset",
-					"colors": [
-						"#FF3253",
-						"#FFDC53"
+						"#6EBDB0",
+						"#7DC4B8"
 					]
 				},
 				{
@@ -107,19 +43,14 @@
 			],
 			"gradients": [
 				{
-					"name": "Purple",
-					"slug": "purple",
-					"gradient": "linear-gradient(135deg, #4D34FA, #ad34fa)"
-				},
-				{
 					"name": "Blue",
 					"slug": "blue",
-					"gradient": "linear-gradient(135deg, #0057FF, #31B5FF)"
+					"gradient": "linear-gradient(135deg, #004B56, #1A5D67)"
 				},
 				{
-					"name": "Pink",
-					"slug": "pink",
-					"gradient": "linear-gradient(135deg, #FF007A, #FF81BD)"
+					"name": "Red",
+					"slug": "red",
+					"gradient": "linear-gradient(135deg, #A75443, #B06556)"
 				},
 				{
 					"name": "Black",
@@ -127,66 +58,66 @@
 					"gradient": "linear-gradient(135deg, #14111E, #4B4462)"
 				},
 				{
-					"name": "Heat",
-					"slug": "heat",
-					"gradient": "linear-gradient(135deg, #F32758, #FFC581)"
+					"name": "Teal",
+					"slug": "teal",
+					"gradient": "linear-gradient(135deg, #6EBDB0, #7DC4B8)"
 				}
 			],
 			"palette": [
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#5344F4"
+					"color": "#A75443"
 				},
 				{
 					"name": "Brand Accent",
 					"slug": "primary-accent",
-					"color": "#e9e7ff"
+					"color": "#B06556"
 				},
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#DEC9FF"
+					"color": "#6EBDB0"
 				},
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#3d386b"
+					"color": "#7DC4B8"
 				},
 				{
 					"name": "Contrast",
 					"slug": "main",
-					"color": "#1E1E26"
+					"color": "#004B56"
 				},
 				{
 					"name": "Contrast Accent",
 					"slug": "main-accent",
-					"color": "#d4d4ec"
+					"color": "#1A5D67"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "#fff"
+					"color": "#FFFBE6"
 				},
 				{
 					"name": "Base Accent",
 					"slug": "secondary",
-					"color": "#545473"
+					"color": "#004B56"
 				},
 				{
 					"name": "Tint",
 					"slug": "tertiary",
-					"color": "#f8f7fc"
+					"color": "#F7FCFC"
 				},
 				{
 					"name": "Border Base",
 					"slug": "border-light",
-					"color": "#E3E3F0"
+					"color": "#1A5D67"
 				},
 				{
 					"name": "Border Contrast",
 					"slug": "border-dark",
-					"color": "#4E4E60"
+					"color": "#004B56"
 				}
 			],
 			"link": true
