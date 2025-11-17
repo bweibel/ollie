@@ -102,7 +102,7 @@
 				{
 					"name": "Base Accent",
 					"slug": "secondary",
-					"color": "#004B56"
+					"color": "#00262b"
 				},
 				{
 					"name": "Tint",
@@ -710,7 +710,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "0",
+					"radius": "5px",
 					"width": "0"
 				},
 				"color": {
@@ -727,7 +727,7 @@
 				},
 				"typography": {
 					"fontFamily": "Oswald, sans-serif",
-					"fontSize": "var:preset|font-size|small",
+					"fontSize": "var:preset|font-size|base",
 					"fontWeight": "700"
 				},
 				":hover": {

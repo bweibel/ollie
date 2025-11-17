@@ -139,13 +139,16 @@ label {
 /* Basic One Row Header Layout (Mobile and Scrolling) */
 .site-header {
 	position: sticky;
-	top: 0;
+	top: 0px;
 	z-index: 100;
 
 	--content: min(var(--wp--style--global--wide-size), 100%);
     display: grid;
-    grid-template-columns:  1fr  var(--content) 1fr  ;
-	grid-template-areas: ". main . ";
+    grid-template-columns:  1fr  var(--content) 1fr ;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"anouncement anouncement anouncement"
+	"main main main";
 
 	background-color: var(--wp--preset--color--base);
 	transition: background-color 0.2s, filter 0.2s;
@@ -154,7 +157,22 @@ label {
 }
 
 .is-scrolling .site-header {
-	background-color: color-mix(in srgb, var(--wp--preset--color--base) 90%, transparent);
+	background-color: color-mix(in srgb, var(--wp--preset--color--base) 85%, transparent);
+	border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--base) 60%, transparent);;
+}
+
+.site-header .announcement {
+	grid-area: anouncement;
+	min-height: 20px;
+	transition: min-height .2s;
+}
+
+.is-scrolling .announcement {
+	min-height: 4px;
+}
+
+.is-scrolling .announcement > * {
+	display: none;
 }
 
 :not(.has-modal-open) .is-scrolling .site-header {
@@ -164,21 +182,62 @@ label {
 .site-header .header-content {
 	grid-area: main;
 	display: flex;
+	gap: 2rem;
 	justify-content: space-between;
 	padding-block: var(--wp--preset--spacing--small);
+	padding-inline: var(--wp--preset--spacing--small);
+}
+
+@media screen and (min-width: 781px) {
+.is-scrolling .site-header {
+	grid-template-areas: 
+	"anouncement anouncement anouncement"
+	". main .";
+}
+
+	.site-header .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		padding-bottom: 0;
+		padding-inline: 0;
+	}
+
+	.is-scrolling .site-header .header-content {
+		flex-direction: row;
+		padding-inline: var(--wp--preset--spacing--small);
+		justify-content: space-between;
+	}
+
+	.site-header .header-content .navigation-desktop {
+		width: 100%;
+		background-color: var(--wp--preset--color--primary);
+		padding-block: .25rem;
+		margin-top: 0;
+		justify-content: center;
+	}
+
+	.is-scrolling .site-header .navigation-desktop {
+		background-color: transparent;
+				justify-content: flex-end;
+
+	}
 }
 
 .is-scrolling  .site-header .header-content {
 	padding-block: calc(var(--wp--preset--spacing--small)/2);
+	
 }
 
 .header-content .wp-block-site-logo {
-	max-width: 200px;
+	max-width: 400px;
 	transition:  0.2s max-width;
+	animation-delay: .5s;
 }
 
 .is-scrolling .header-content .wp-block-site-logo {
-	/* max-width: 75px; */
+	max-width: 150px;
 }
 
 
