@@ -147,14 +147,17 @@ label {
     grid-template-columns:  1fr  var(--content) 1fr  ;
 	grid-template-areas: ". main . ";
 
-	background-color: var(--wp--preset--color--main);
+	background-color: var(--wp--preset--color--base);
 	transition: background-color 0.2s, filter 0.2s;
 	backdrop-filter: none;
-	box-shadow: 0px 69px 19px 0px rgba(20, 17, 31, 0.00), 0px 44px 18px 0px rgba(20, 17, 31, 0.01), 0px 25px 15px 0px rgba(20, 17, 31, 0.03), 0px 11px 11px 0px rgba(20, 17, 31, 0.04), 0px 3px 6px 0px rgba(20, 17, 31, 0.05);
+	box-shadow: var(--wp--preset--shadow--natural);
 }
 
 .is-scrolling .site-header {
-	background-color: color-mix(in srgb, currentColor 90%, transparent);
+	background-color: color-mix(in srgb, var(--wp--preset--color--base) 90%, transparent);
+}
+
+:not(.has-modal-open) .is-scrolling .site-header {
 	backdrop-filter: blur(5px);
 }
 
@@ -175,7 +178,7 @@ label {
 }
 
 .is-scrolling .header-content .wp-block-site-logo {
-	max-width: 75px;
+	/* max-width: 75px; */
 }
 
 
