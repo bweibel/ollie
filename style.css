@@ -323,3 +323,43 @@ header:has(>.is-position-sticky) {
 		position: static;
 	}
 }
+
+/* Home */
+.icon-card {
+	
+}
+
+.card-button {
+
+}
+
+/* Merchant */
+/* TODO Abstract this to block only css */
+.member-details {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    max-width: var(--wp--style--global--wide-size);
+    margin-inline: auto;
+}
+
+.member-details__media {
+    align-self: center;
+}
+
+.member-details__title {
+	margin-bottom: 0;
+}
+
+.member-details__meta {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.member-details__meta-item h4 {
+	margin: 0;
+}
+
+.member-details__meta-item--social ul {
+	gap: 1rem;
+	margin-block: 10px;
+}

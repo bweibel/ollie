@@ -242,3 +242,42 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+add_action( 'acf/init', __NAMESPACE__ . '\\bweib_register_member_details_block' );
+
+function bweib_register_member_details_block() {
+
+    // Debug: confirm this fires
+    error_log( __NAMESPACE__ . '\\bweib_register_member_details_block fired' );
+
+    if ( ! function_exists( 'acf_register_block_type' ) ) {
+        error_log( 'ACF: acf_register_block_type() not available.' );
+        return;
+    }
+
+    // TEMP: make registration as simple as possible first
+    acf_register_block_type( [
+        'name'            => 'member-details',
+        'title'           => __( 'Member Details', 'bweib-pomeroy' ),
+        'description'     => __( 'Displays chamber member information from ACF fields.', 'bweib-pomeroy' ),
+
+        // Use a very common category just to avoid any category weirdness while debugging
+        'category'        => 'widgets',
+        'icon'            => 'id',
+        'keywords'        => [ 'member', 'directory', 'profile' ],
+
+        // TEMP: remove post_types restriction to make sure it shows everywhere
+        // 'post_types'      => [ 'member' ],
+
+        // If this code + file live in the *child* theme, use get_stylesheet_directory().
+        // If there is no parent theme, either/template/stylesheet dir is fine.
+        'render_template' => get_stylesheet_directory() . '/blocks/member-details.php',
+
+        'mode'            => 'preview',
+        'supports'        => [
+            'align' => false,
+        ],
+    ] );
+
+    error_log( 'ACF: registered block "member-details".' );
+}
